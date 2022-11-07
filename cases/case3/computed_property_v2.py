@@ -1,5 +1,5 @@
 
-def computed_property(*args):
+def computed_property_v2(*args):
 
     class computed_property_prospector(object):
         def __init__(self, fget=None, fset=None, fdel=None, doc=None, dependencies=None):
@@ -8,7 +8,8 @@ def computed_property(*args):
             self.fdel = fdel
             if doc is None and fget is not None:
                 doc = fget.__doc__
-            self.dependencies = ('x', 'y', 'z')
+            self.dependencies = dependencies
+            self.dependencies = ('radius', 'area')
             self.cached = dict()
             self.__doc__ = doc
 

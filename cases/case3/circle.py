@@ -1,11 +1,11 @@
-from cases.case3.computed_property import computed_property
+from cases.case3.computed_property_v2 import computed_property_v2
 
 
 class Circle:
     def __init__(self, radius=1):
         self.radius = radius
 
-    @computed_property('radius', 'area')
+    @computed_property_v2('radius', 'area')
     def diameter(self):
         """Circle diameter from radius"""
         print('computing diameter')
